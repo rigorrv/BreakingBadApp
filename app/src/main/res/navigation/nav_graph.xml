@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/introFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="net.android.breakingbadapp.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/go_character"
+            app:destination="@id/characterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="net.android.breakingbadapp.ui.CharacterFragment"
+        android:label="CharacterFragment" >
+        <action
+            android:id="@+id/go_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="net.android.breakingbadapp.ui.IntroFragment"
+        android:label="IntroFragment" >
+        <action
+            android:id="@+id/intro_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
